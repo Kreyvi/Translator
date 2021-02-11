@@ -7,8 +7,6 @@ from ibm_watson import LanguageTranslatorV3
 
 load_dotenv()
 
-
-
 API_KEY = os.getenv('API_KEY')
 API_URL = os.getenv('API_URL')
 API_TRANSLATE = '/v3/translate?version=2018-05-01/'
@@ -48,14 +46,5 @@ def translate(text, language):
 
 
 def main(text):
-    # text = input()
     answer = json.loads(translate(text, lang_detect(text)))
     return answer['translations'][0]['translation']
-
-
-# if __name__ == '__main__':
-#     main()
-
-
-
-'''hello! what is your name? where is your brain?'''

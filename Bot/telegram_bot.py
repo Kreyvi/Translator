@@ -37,5 +37,3 @@ translate_handler = MessageHandler(Filters.text, translator)
 dispatcher.add_handler(translate_handler)
 
 updater.start_polling()
-
-
