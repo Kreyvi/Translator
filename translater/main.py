@@ -1,11 +1,9 @@
 import json
 import os
 
-import requests
-import telegram
-from ibm_watson import LanguageTranslatorV3
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from dotenv import load_dotenv
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson import LanguageTranslatorV3
 
 load_dotenv()
 
@@ -18,6 +16,7 @@ API_IDENTIFY = '/v3/identify?version=2018-05-01/'
 
 
 def lang_detect(text):
+    # Language detection
     auth = IAMAuthenticator(API_KEY)
     language_translator = LanguageTranslatorV3(
         version='2018-05-01',
@@ -34,6 +33,7 @@ def lang_detect(text):
 
 
 def translate(text, language):
+    # Translation
     auth = IAMAuthenticator(API_KEY)
     language_translator = LanguageTranslatorV3(
         version='2018-05-01',
