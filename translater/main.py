@@ -47,14 +47,14 @@ def translate(text, language):
     return json.dumps(translation, indent=2, ensure_ascii=False)
 
 
-def main():
-    text = input()
+def main(text):
+    # text = input()
     answer = json.loads(translate(text, lang_detect(text)))
-    print(answer['translations'][0]['translation'])
+    return answer['translations'][0]['translation']
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
 
 
 
