@@ -2,6 +2,6 @@
 
 Simple translator using IBM WATSON API
 
-*translating all supported languages to russian
+*translating all supported languages to russian(in later releases)
 
-*automatic language detection
+*language detection
